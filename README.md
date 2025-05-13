@@ -1,17 +1,6 @@
-# フォルダに移動
-cd path/to/apollon-beauty-shop
-
-# Gitリポジトリを初期化
+cd ⁨iCloud Drive⁩/Apollon⁩/⁨web⁩/index.html
 git init
-
-# ファイルをステージング
 git add .
-
-# 変更をコミット
-git commit -m "Initial commit"
-
-# リモートリポジトリを追加（URLは自分のGitHubリポジトリのものに置き換え）
-git remote add origin https://github.com/yourusername/apollon-beauty-shop.git
-
-# コードをプッシュ
-git push -u origin main
+git commit -m "first commit"
+git remote add origin https://github.com/miiiiiiiiiisako/ApollonBCShop.git
+git remote add origin https://github.com/miiiiiiiiiisako/ApollonBCShop.git
