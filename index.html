@@ -54,6 +54,26 @@
       font-size: 0.95em;
     }
 
+    /* Language Toggle Button */
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .lang-toggle:hover {
+      background-color: #f0f7ff;
+      border-color: var(--accent-color);
+    }
+
     /* Navigation Menu */
     .nav-menu {
       position: sticky;
@@ -624,6 +644,13 @@
         max-width: none;
         font-size: 0.8rem;
         padding: 8px 10px;
+      }
+      
+      .lang-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
       }
     }
 
@@ -1257,15 +1284,8 @@
       // Add language toggle button
       const header = document.querySelector('.header .container');
       const toggleBtn = document.createElement('button');
-      toggleBtn.innerHTML = 'JP/EN';
-      toggleBtn.style.position = 'absolute';
-      toggleBtn.style.top = '20px';
-      toggleBtn.style.right = '20px';
-      toggleBtn.style.padding = '8px 16px';
-      toggleBtn.style.backgroundColor = '#fff';
-      toggleBtn.style.border = '1px solid #ddd';
-      toggleBtn.style.borderRadius = '4px';
-      toggleBtn.style.cursor = 'pointer';
+      toggleBtn.className = 'lang-toggle';
+      toggleBtn.innerHTML = 'Japanese/English';
       
       // Set header to relative for absolute positioning
       header.style.position = 'relative';
@@ -1283,12 +1303,12 @@
           // Show only English
           jpElements.forEach(el => el.style.display = 'none');
           enElements.forEach(el => el.style.display = 'block');
-          toggleBtn.innerHTML = 'EN';
+          toggleBtn.innerHTML = 'English';
         } else {
           // Show both languages
           jpElements.forEach(el => el.style.display = 'block');
           enElements.forEach(el => el.style.display = 'block');
-          toggleBtn.innerHTML = 'JP/EN';
+          toggleBtn.innerHTML = 'Japanese/English';
         }
         
         showBoth = !showBoth;
